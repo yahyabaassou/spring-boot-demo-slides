@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Spring Boot</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Quick start with Spring Boot</h1>
+					<p>
+						<small>and good practices...</small>
+					</p>
+					<img data-src="https://spring.io/img/spring-by-pivotal-9066b55828deb3c10e27e609af322c40.png" alt="Spring">
+				</section>
+				<section>
+					<h2>Plan</h2>
+						<ol>
+							<li>Spring Boot</li>
+							<li>Spring initializr</li>
+							<li>Basic application</li>
+							<li>Security</li>
+							<li>Persistence</li>
+							<li>Good practices</li>
+							<li>Useful tools</li>
+						</ol>
+				</section>
+				<section>
+					<section>
+						<h1>What's Spring Boot?</h1>
+					</section>
+					<section>
+						<blockquote cite="https://github.com/spring-projects/spring-boot">
+					    Spring Boot makes it easy to create Spring-powered, production-grade applications and services with absolute minimum fuss.
+							It takes an opinionated view of the Spring platform so that new and existing users can quickly get to the bits they need.
+					  </blockquote>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Spring Boot initializr</h1>
+					</section>
+					<section>
+						<p>
+							To boostrap your application with <a href="https://start.spring.io/">Spring Initilizr</a>, you have to fill in few informations:
+						</p>
+						<ul>
+							<li>Project type: Maven or Gradle</li>
+							<li>Language: Java, Kotlin or Groovy</li>
+							<li>Spring Boot version</li>
+							<li>Project Metadata (group, artifact)</li>
+							<li>Additional dependencies</li>
+						</ul>
+						<p>
+							You can also be more precise by fill in also packaging mode (jar or war) and java version.
+						</p>
+					</section>
+					<section>
+						<p>
+							You could achieve the same result with a simple curl command
+						</p>
+						<pre style="">
+							<code class="plainedtext" data-trim contenteditable>
+								// This command generates a spring-boot-demo directory
+								// holding a Maven web-based Java project:
+								$ curl https://start.spring.io/starter.tgz \
+										-d dependencies=web \
+										-d language=java \
+										-d javaVersion=1.8 \
+										-d type=maven-project \
+										-d baseDir=spring-boot-demo | tar -xzvf -
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section>
+					<h1>Basic application</h1>
+				</section>
+				<section>
+					<h1>Security</h1>
+				</section>
+				<section>
+					<h1>Persistence</h1>
+				</section>
+				<section>
+					<h1>Good practices</h1>
+					<!-- controllers, services, repositories, tests -->
+				</section>
+				<section>
+					<h1>Useful tools</h1>
+					<!-- Lombok, Mapstruct, Flyway, ... -->
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
